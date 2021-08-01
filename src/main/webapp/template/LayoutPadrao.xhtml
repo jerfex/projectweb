@@ -4,17 +4,22 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
+        <h:outputStylesheet library="css" name="sistema.css"/> 
+        <!-- comment <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> -->
+        <link href="css/sistema.css" rel="stylesheet" />
         <title><ui:insert name="titulo"> Sistema de pedidos de vendas</ui:insert></title>
-        <h:outputStylesheet library="css/sistema.css" name="sistema.css" /> 
-        <link type = "text/css" rel = "stylesheet"  href = "css/sistema.css.jsf?ln = css" />
+
+
     </h:head>
     <h:body>
+
         <head>
             <div>
                 <h:link>
-                    <h:graphicImage value="imagens/log.png"/> 
+
+                    <h1>Ola, mundo!</h1>
+                    <h:graphicImage value="imagens/log.png" /> 
                 </h:link>
             </div>
         </head>

@@ -43,4 +43,20 @@ footer {
     font-family: arial, sans-serif;
 }
 
+#login-dialog {
+    width: 290px;
+    margin: auto;
+    margin-top: 150px;
+    
+}
+
+.grid-login{
+    background-color: #f2f2f2; 
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+    padding: 10 px;
+    
+}
+
 

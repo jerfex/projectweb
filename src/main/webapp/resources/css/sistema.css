@@ -42,6 +42,12 @@ footer {
     font-size: 30px;
     font-family: arial, sans-serif;
 }
+h1 {
+    font-size: 24 px;
+    margin-bottom: 500px;
+    padding: 0px;
+    margin: 0 px;
+}
 
 #login-dialog {
     width: 290px;

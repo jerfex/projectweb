@@ -16,10 +16,11 @@
             <p:toolbarGroup>
                 <p:button value="Novo" outcome="/produtos/CadastroProduto"/>
                 <p:commandButton value="Salvar" id="botaoSalvar" />
-                <p:toolbarGroup align="right">
-                    <p:commandButton  value="Pesquisa"/>
-                </p:toolbarGroup>
             </p:toolbarGroup>
+            <p:toolbarGroup align="right">
+                <p:button  value="Pesquisa"/>
+            </p:toolbarGroup>
+
         </p:toolbar>
 
         <p:panelGrid columns="2" id="painel" style="width: 100%; margin-top: 20px"
@@ -48,7 +49,7 @@
             <p:inputText id="valorUnitario" size="10" maxlength="10" />
 
             <p:outputLabel value="Estoque" for="estoque"/>
-            <p:inputText id="estoque" size="10" maxlength="10" />          
+            <p:inputText id="estoque" size="10" maxlength="4" />          
         </p:panelGrid>
     </ui:define>
 </ui:composition>  

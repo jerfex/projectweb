@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
         <title><ui:insert name="titulo"> Sistema de pedidos de vendas</ui:insert></title>
         <h:outputStylesheet library = "css" name = "sistema.css"  /> <!-- Todo link utilizado precisa da pasta resouce -->
-
+        <h:outputScript library="js" name="jquery.maskMoney.min.js"/>
     </h:head>
     <h:body>
         <p:ajaxStatus styleClass="ajax-status" >
@@ -38,10 +38,19 @@
 
             </ui:insert>
         </div>
-        <p:separator style="margin-top: 20 px" ></p:separator>
+        <p:separator style="margin-top: 20px" ></p:separator>
         <footer>
             Devs copy. 
         </footer>
+        <script>
+            function configurarMoeda(){
+                $(".moeda").maskMoney({decimal:",", thousands:".", allowZero: true});
+            }
+            
+            $(document).ready(function(){
+                configurarMoeda();
+            });
+        </script>
     </h:body>
 
 </html>

@@ -1,6 +1,10 @@
 name: Java CI
 
-on: [push]
+on:
+  push:
+    branches: [ master ] # Sempre roda com a branches master para debloy automatico
+  pull_request:          # vair ser execultado sempre que fazer um pull request 
+    branches: [ master ]
 
 jobs:
   build:

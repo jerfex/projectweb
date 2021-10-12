@@ -25,4 +25,4 @@ jobs:
       run: mvn -B package --file pom.xml
       
     - name: payara deploy
-      run: curl -v -u admin:mtprmeaie! -T 'Content-Type: application/json' -X PUT -d 'badassfish' 'https://metaprime.ddns.net:4848//rest-jcache-1.0-SNAPSHOT/webresources/cache?key=payara'
+      run: curl -v -u admin:mtprmeaie! -T 'https://metaprime.ddns.net:4848//rest-jcache-1.0-SNAPSHOT/webresources/cache?key=payara'

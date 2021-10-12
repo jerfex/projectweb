@@ -21,5 +21,8 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - name: Build with Ant
-      run: ant -noinput -buildfile build.xml
+    - name: Buid with
+      run: mvn -B package --file pom.xml
+      
+    - name: payara deploy
+      run: curl -v -u admin:mtprmeaie! -T /metaprime/eorbis/servidores/payara5/glassfish/domains/domain1/applications/projectweb.war 'https://metaprime.ddns.net:4848/'

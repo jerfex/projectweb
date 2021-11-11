@@ -1,28 +1,18 @@
-# This workflow will build a Java project with Ant
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-ant
-
-name: Java CI
-
+name: Production deploy
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  release:
+    tags:
+      - v*
 
 jobs:
-  build:
-
+  prod-deploy:
+    name: Production deploy
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 11
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
-        distribution: 'adopt'
-    - name: Buid with
-      run: mvn -B package --file pom.xml
-      
-    - name: payara deploy
-      run: curl -v -u admin:mtprmeaie! -T /metaprime/eorbis/servidores/payara5/glassfish/domains/domain1/applications/eorbis-2.8.6.war 'https://metaprime.ddns.net:4848//rest-jcache-1.0-SNAPSHOT/webresources/cache?key=payara'
+      - name: Checkout code
+        if: github.event.action == 'published'
+        uses: actions/checkout@master
+        
+      - name: Run Tests
+        run: ls

@@ -15,13 +15,13 @@ import javax.enterprise.context.RequestScoped;
  */
 @ManagedBean
 @RequestScoped
-public class pesquisaProdutosBean {
+public class pesquisasProdutosBean {
 
   
 
     private List<Integer> produtosFiltrados;
 
-    public pesquisaProdutosBean()
+    public pesquisasProdutosBean()
     {
         produtosFiltrados = new ArrayList<>();
         for (int i = 0; i < 50; i++) {

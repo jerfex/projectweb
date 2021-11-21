@@ -34,11 +34,26 @@
             <p:dataTable id="produtosTable" value="#{pesquisasProdutosBean.produtosFiltrados}" var="produtos" 
                          style="margin-top: 20px" emptyMessage="Nenhum produto encotrado." rows="20"
                          paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom">
-                         
+
                 <p:column headerText="SKU" style="text-align: center; width: 100px">
                     <h:outputText value="123" />
                 </p:column>
-                
+                <p:column headerText="Nome" >
+                    <h:outputText value="Bala De morango" />
+                </p:column>
+                <p:column headerText="Categoria" style="width: 250px">
+                    <h:outputText value="Doces - Balas e clicletes" />
+                </p:column>
+                <p:column headerText="Valor Unitário" style="width: 120px">
+                    <h:outputText value="R$ 1,20" />
+                </p:column>
+                 <p:column headerText="Estoque" style="text-align: center; width: 100px">
+                    <h:outputText value="98" />
+                </p:column>
+                <p:column style="width: 100px; text-align: center" >
+                    <p:button icon="ui-icon-pencil" title="Editar" />
+                    <p:commandButton icon="ui-icon-trash" title="Excluir"/>      
+                </p:column>
             </p:dataTable>
         </h:form>
     </ui:define>

@@ -47,9 +47,13 @@
 
                 <p:outputLabel value="Cliente" />
                 <p:inputText  size="40" />
-                
+
                 <p:outputLabel value="Status" />
-                <p:inputText  size="40" />
+                <p:selectManyCheckbox>
+                    <f:selectItem itemLabel="Orçamento" />
+                    <f:selectItem itemLabel="Emitido" />
+                    <f:selectItem itemLabel="Cancelado  " />
+                </p:selectManyCheckbox>
             </p:panelGrid>
         </h:form>
     </ui:define>

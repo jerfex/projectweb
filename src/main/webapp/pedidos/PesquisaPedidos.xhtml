@@ -54,6 +54,24 @@
                     <f:selectItem itemLabel="Emitido" />
                     <f:selectItem itemLabel="Cancelado  " />
                 </p:selectManyCheckbox>
+
+                <p:dataTable id="pedidosTable" value="#{pesquisasProdutosBean.produtosFiltrados}" var="pedido"
+                             style="margin-top: 20px" emptyMessage="Nenhuma Pedido encontrado."  
+                             rows="20" paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom">
+                    <p:column headerText="Número" style="text-align: center; width: 100px">
+                        <h:outputText value="12345"/>
+                    </p:column>
+                    <p:column headerText="Cliente">
+                        <h:outputText value="Supermecado Tatu"/>
+                    </p:column>
+                     <p:column headerText="Vendedor">
+                        <h:outputText value="Deves jerfex"/>
+                    </p:column>
+                    <p:column headerText="Data de Criacão" style="text-align: center; width: 140px">
+                        <h:outputText value="Deves jerfex"/>
+                    </p:column>
+                </p:dataTable>
+
             </p:panelGrid>
         </h:form>
     </ui:define>

@@ -54,25 +54,32 @@
                     <f:selectItem itemLabel="Emitido" />
                     <f:selectItem itemLabel="Cancelado  " />
                 </p:selectManyCheckbox>
-
-                <p:dataTable id="pedidosTable" value="#{pesquisasProdutosBean.produtosFiltrados}" var="pedido"
-                             style="margin-top: 20px" emptyMessage="Nenhuma Pedido encontrado."  
-                             rows="20" paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom">
-                    <p:column headerText="Número" style="text-align: center; width: 100px">
-                        <h:outputText value="12345"/>
-                    </p:column>
-                    <p:column headerText="Cliente">
-                        <h:outputText value="Supermecado Tatu"/>
-                    </p:column>
-                     <p:column headerText="Vendedor">
-                        <h:outputText value="Deves jerfex"/>
-                    </p:column>
-                    <p:column headerText="Data de Criacão" style="text-align: center; width: 140px">
-                        <h:outputText value="Deves jerfex"/>
-                    </p:column>
-                </p:dataTable>
-
-            </p:panelGrid>
+            </p:panelGrid> 
+            <p:dataTable id="pedidosTable" value="#{pesquisasProdutosBean.produtosFiltrados}" var="pedido"
+                         style="margin-top: 20px" emptyMessage="Nenhuma Pedido encontrado."  
+                         rows="20" paginator="true" paginatorAlwaysVisible="false" paginatorPosition="bottom">
+                <p:column headerText="Número" style="text-align: center; width: 100px">
+                    <h:outputText value="12345"/>
+                </p:column>
+                <p:column headerText="Cliente">
+                    <h:outputText value="Supermecado Tatu"/>
+                </p:column>
+                <p:column headerText="Vendedor">
+                    <h:outputText value="Deves jerfex"/>
+                </p:column>
+                <p:column headerText="Data de Criacão" style="text-align: center; width: 140px">
+                    <h:outputText value="Deves jerfex"/>
+                </p:column>
+                <p:column headerText="Valor Total" style="text-align: right; width: 120px">
+                    <h:outputText value="R$ 1.230,44"/>
+                </p:column>
+                <p:column headerText="Status" style="width: 100px">
+                    <h:outputText value="Emitido"/>
+                </p:column>
+                <p:column style="text-align: right; width: 120px">
+                    <p:button icon="ui-icon-pencil" title="Editar"/>
+                </p:column>
+            </p:dataTable>
         </h:form>
     </ui:define>
 </ui:composition>  

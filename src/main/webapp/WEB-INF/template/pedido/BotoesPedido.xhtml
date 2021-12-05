@@ -7,19 +7,17 @@
     xmlns:p="http://primefaces.org/ui">
 
     <p:toolbar style="margin-top: 20px">
-        <p:toolbarGroup>
-            <p:toolbarGroup>
-                <p:button value="Novo" outcome="/pedidos/CadastroPedidos" /> 
-                <p:commandButton value="Salvar"/>
-            </p:toolbarGroup>
-            <p:toolbarGroup align="right">
-                <p:commandButton value="Emitir"/>
-                <p:commandButton value="Cancelar"/>
-                <p:commandButton value="Enviar por e-mail"/>
+        <p:toolbarGroup >
+            <p:button value="Novo" outcome="/pedidos/CadastroPedidos" /> 
+            <p:commandButton value="Salvar"/>
+        </p:toolbarGroup>
+        <p:toolbarGroup align="right">
+            <p:commandButton value="Emitir"/>
+            <p:commandButton value="Cancelar"/>
+            <p:commandButton value="Enviar por e-mail"/>
 
-                <p:separator/>
-                <p:button value="Pesquisar" outcome="/pedidos/PesquisaPedidos" /> 
-            </p:toolbarGroup>
+            <p:separator></p:separator>
+            <p:button value="Pesquisar" outcome="/pedidos/PesquisaPedidos" /> 
         </p:toolbarGroup>
     </p:toolbar>
 </ui:composition>  

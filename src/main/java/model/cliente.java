@@ -8,22 +8,31 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 
 /**
  *
  * @author j
  */
+
+@Entity
 public class cliente implements Serializable {
 
     private static final long serialVersionUID = 1l;
-
+    @Id
+    @GeneratedValue
     private Long id;
     private String nome;
     private String email;
     private String documentoReceitaFederal;
     private tipoPessoa tipo;
+    @Transient
     private List<endereco> enderecos = new ArrayList<>();
-
+    
+    
     public Long getId() {
         return id;
     }

@@ -1,4 +1,5 @@
 
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -18,7 +19,7 @@ import model.tipoPessoa;
 public class teste {
     
      public static void main(String[] args) {
-         
+        
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("ProdPU");
         EntityManager manager = factory.createEntityManager();
         
@@ -26,8 +27,8 @@ public class teste {
          trx.begin();
          cliente cliente = new cliente();
          cliente.setNome("teste");
-         cliente.setEmail("teste#teste");
-         cliente.setDocumentoReceitaFederal("wefwf");
+         cliente.setEmail("teste@teste");
+         cliente.setDocumentoReceitaFederal("11111111");
          cliente.setTipo(tipoPessoa.FISICA);
          
          manager.persist(cliente);

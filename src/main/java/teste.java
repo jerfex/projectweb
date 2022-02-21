@@ -5,6 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import model.cliente;
+import model.endereco;
 import model.tipoPessoa;
 
 /*
@@ -30,6 +31,16 @@ public class teste {
          cliente.setEmail("teste@teste");
          cliente.setDocumentoReceitaFederal("11111111");
          cliente.setTipo(tipoPessoa.FISICA);
+         
+         endereco endereco = new endereco();
+         endereco.setLogradouro("Rua dos teste");
+         endereco.setNumero("111");
+         endereco.setCidade("Goianai");
+         endereco.setUf("GO");
+         endereco.setCep("888-888");
+         endereco.setCliente(cliente);
+         
+         cliente.getEnderecos().add(endereco);
          
          manager.persist(cliente);
          trx.commit();

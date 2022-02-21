@@ -8,9 +8,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
 /**
@@ -29,7 +31,7 @@ public class cliente implements Serializable {
     private String email;
     private String documentoReceitaFederal;
     private tipoPessoa tipo;
-    @Transient
+    @OneToMany(mappedBy = "cliente" , cascade = CascadeType.ALL)
     private List<endereco> enderecos = new ArrayList<>();
     
     

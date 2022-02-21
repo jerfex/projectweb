@@ -9,6 +9,7 @@ import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -25,7 +26,9 @@ public class endereco implements Serializable {
     private String numero;
     private String complemento;
     private String uf;
+    private String cidade;
     private String cep;
+    @ManyToOne
     private cliente cliente;
 
     public Long getId() {
@@ -50,7 +53,17 @@ public class endereco implements Serializable {
 
     public void setNumero(String numero) {
         this.numero = numero;
+        
     }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+    
 
     public String getComplemento() {
         return complemento;

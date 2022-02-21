@@ -6,17 +6,12 @@ package beans;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.ManagedBean;
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Named;
 
 /**
  *
  * @author j
  */
-@ManagedBean
-@RequestScoped
-@Named
+
 public class pesquisasProdutosBean {
 
   

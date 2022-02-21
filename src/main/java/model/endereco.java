@@ -7,6 +7,8 @@ package model;
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  *
@@ -16,7 +18,8 @@ import javax.persistence.Entity;
 public class endereco implements Serializable {
 
     private static final long serialVersionUID = 1l;
-
+    @Id
+    @GeneratedValue
     private Long id;
     private String logradouro;
     private String numero;

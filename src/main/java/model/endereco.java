@@ -6,29 +6,40 @@ package model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author j
  */
 @Entity
+@Table(name = "endereco")
 public class endereco implements Serializable {
 
     private static final long serialVersionUID = 1l;
     @Id
     @GeneratedValue
     private Long id;
+    @Column(nullable = false, length = 150)
     private String logradouro;
+    @Column(nullable = false, length = 20)
     private String numero;
+    @Column( length = 150)
     private String complemento;
+    @Column(nullable = false, length = 60)
     private String uf;
+    @Column(nullable = false, length = 60)
     private String cidade;
+    @Column(nullable = false, length  = 9)
     private String cep;
     @ManyToOne
+    @JoinColumn(name = "cliente_id",nullable = false)
     private cliente cliente;
 
     public Long getId() {

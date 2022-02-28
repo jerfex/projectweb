@@ -4,10 +4,22 @@
  */
 package model;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author j
  */
-public class usuario {
+@Entity
+@Table(name = "usuario")
+public class usuario implements Serializable{
+    
+    @Id
+    @GeneratedValue
+    private Long id; 
     
 }

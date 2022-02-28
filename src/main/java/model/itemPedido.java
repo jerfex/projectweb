@@ -7,19 +7,37 @@ package model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author j
  */
+@Entity
+@Table(name = "item_pedido")
 public class itemPedido implements Serializable {
 
     private static final long serialVersionUID = 1l;
-
+    
+    
+    @Id
+    @GeneratedValue
     private Long id;
+    @Column(nullable = false, length  = 3)
     private Integer quantidade;
+    @Column(name = "valor_unitario", nullable = false, precision = 10, scale = 2)
     private BigDecimal valorUnitario;
+    @ManyToOne
+    @JoinColumn(name = "produo_id",nullable = false)
     private produto produto;
+    @ManyToOne
+    @JoinColumn(name = "pedido_id",nullable = false)
     private pedido pedido;
 
     public Long getId() {

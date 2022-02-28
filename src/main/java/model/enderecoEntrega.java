@@ -5,21 +5,31 @@
 package model;
 
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
 
 /**
  *
  * @author j
  */
+@Embeddable
 public class enderecoEntrega  implements Serializable {
 
     private static final long serialVersionUID = 1l;
     
-    
+    @Embedded
+    @Column(name = "entrega_logradouro",nullable = false, length = 150)
     private String logradouro;
+    @Column(name = "entrega_numeoro",nullable = false, length = 20)
     private String numero;
+    @Column(name = "entrega_complemento", length = 150)
     private String complemento;
+    @Column(name = "entrega_cidade",nullable = false, length = 60)
     private String cidade;
+    @Column(name = "entrega_uf",nullable = false, length = 60)
     private String uf;
+    @Column(name = "entrega_cep",nullable = false, length = 150)
     private String cep; 
 
     public String getLogradouro() {

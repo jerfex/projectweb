@@ -7,15 +7,22 @@ package model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author j
  */
+@Entity
+@Table(name = "produto")
 public class produto implements Serializable {
 
     private static final long serialVersionUID = 1l;
-    
+     @Id
+    @GeneratedValue
     private Long id; 
     private String nome;
     private String sku;

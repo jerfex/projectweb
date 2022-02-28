@@ -15,11 +15,13 @@ import javax.persistence.Table;
  * @author j
  */
 @Entity
-@Table(name = "usuario")
+@Table(name = "categoria")
 public class categoria implements Serializable {
 
     @Id
     @GeneratedValue
     private Long id;
+    private String descricao;
+    
 
 }

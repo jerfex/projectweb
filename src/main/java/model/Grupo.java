@@ -8,6 +8,6 @@ package model;
  *
  * @author j
  */
-public class grupo {
+public class Grupo {
     
 }

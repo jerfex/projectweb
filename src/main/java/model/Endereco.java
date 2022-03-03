@@ -20,7 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "endereco")
-public class endereco implements Serializable {
+public class Endereco implements Serializable {
 
     private static final long serialVersionUID = 1l;
     @Id
@@ -40,7 +40,7 @@ public class endereco implements Serializable {
     private String cep;
     @ManyToOne
     @JoinColumn(name = "cliente_id",nullable = false)
-    private cliente cliente;
+    private Cliente cliente;
 
     public Long getId() {
         return id;
@@ -100,11 +100,11 @@ public class endereco implements Serializable {
         this.cep = cep;
     }
 
-    public cliente getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(cliente cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 
@@ -126,7 +126,7 @@ public class endereco implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final endereco other = (endereco) obj;
+        final Endereco other = (Endereco) obj;
         return Objects.equals(this.id, other.id);
     }
 

@@ -4,9 +4,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import model.cliente;
-import model.endereco;
-import model.tipoPessoa;
+import model.Cliente;
+import model.Endereco;
+import model.TipoPessoa;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -26,13 +26,13 @@ public class teste {
         
          EntityTransaction trx = manager.getTransaction();
          trx.begin();
-         cliente cliente = new cliente();
+         Cliente cliente = new Cliente();
          cliente.setNome("teste");
          cliente.setEmail("teste@teste");
          cliente.setDocumentoReceitaFederal("11111111");
-         cliente.setTipo(tipoPessoa.FISICA);
+         cliente.setTipo(TipoPessoa.FISICA);
          
-         endereco endereco = new endereco();
+         Endereco endereco = new Endereco();
          endereco.setLogradouro("Rua dos teste");
          endereco.setNumero("111");
          endereco.setCidade("Goianai");

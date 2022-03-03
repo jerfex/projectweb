@@ -21,7 +21,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "item_pedido")
-public class itemPedido implements Serializable {
+public class ItemPedido implements Serializable {
 
     private static final long serialVersionUID = 1l;
     
@@ -35,10 +35,10 @@ public class itemPedido implements Serializable {
     private BigDecimal valorUnitario;
     @ManyToOne
     @JoinColumn(name = "produo_id",nullable = false)
-    private produto produto;
+    private Produto produto;
     @ManyToOne
     @JoinColumn(name = "pedido_id",nullable = false)
-    private pedido pedido;
+    private Pedido pedido;
 
     public Long getId() {
         return id;
@@ -64,19 +64,19 @@ public class itemPedido implements Serializable {
         this.valorUnitario = valorUnitario;
     }
 
-    public produto getProduto() {
+    public Produto getProduto() {
         return produto;
     }
 
-    public void setProduto(produto produto) {
+    public void setProduto(Produto produto) {
         this.produto = produto;
     }
 
-    public pedido getPedido() {
+    public Pedido getPedido() {
         return pedido;
     }
 
-    public void setPedido(pedido pedido) {
+    public void setPedido(Pedido pedido) {
         this.pedido = pedido;
     }
 
@@ -98,7 +98,7 @@ public class itemPedido implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final itemPedido other = (itemPedido) obj;
+        final ItemPedido other = (ItemPedido) obj;
         return Objects.equals(this.id, other.id);
     }
 

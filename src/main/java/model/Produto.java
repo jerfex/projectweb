@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -18,7 +19,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "produto")
-public class produto implements Serializable {
+public class Produto implements Serializable {
 
     private static final long serialVersionUID = 1l;
      @Id
@@ -26,9 +27,10 @@ public class produto implements Serializable {
     private Long id; 
     private String nome;
     private String sku;
+    @NotNull
     private BigDecimal valorUnitario; 
     private Integer quantidadeEsotque; 
-    private categoria categoria;
+    private Categoria categoria;
 
     public Long getId() {
         return id;
@@ -70,11 +72,11 @@ public class produto implements Serializable {
         this.quantidadeEsotque = quantidadeEsotque;
     }
 
-    public categoria getCategoria() {
+    public Categoria getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(categoria categoria) {
+    public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
 
@@ -96,7 +98,7 @@ public class produto implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final produto other = (produto) obj;
+        final Produto other = (Produto) obj;
         return Objects.equals(this.id, other.id);
     }
     

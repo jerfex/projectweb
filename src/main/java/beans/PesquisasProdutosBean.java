@@ -12,13 +12,13 @@ import java.util.List;
  * @author j
  */
 
-public class pesquisasProdutosBean {
+public class PesquisasProdutosBean {
 
   
 
     private List<Integer> produtosFiltrados;
 
-    public pesquisasProdutosBean()
+    public PesquisasProdutosBean()
     {
         produtosFiltrados = new ArrayList<>();
         for (int i = 0; i < 50; i++) {

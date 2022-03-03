@@ -8,7 +8,6 @@ package model;
  *
  * @author j
  */
-public enum formaPagamento {
-   DINHEIRO, CARTAO_CREDITO, CARTAO_DEBITO,
-   CHEQUE, BOLETO_BANCARIO, DEPOSITO_BANCARIO 
+public enum TipoPessoa {
+    FISICA, JURICIDA
 }

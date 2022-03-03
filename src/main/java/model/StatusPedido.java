@@ -8,7 +8,7 @@ package model;
  *
  * @author j
  */
-public enum statusPedido {
+public enum StatusPedido {
     
     ORCAMENTO, EMITIDO, CANCELADO
     

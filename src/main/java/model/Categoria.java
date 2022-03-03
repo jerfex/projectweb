@@ -16,7 +16,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "categoria")
-public class categoria implements Serializable {
+public class Categoria implements Serializable {
 
     @Id
     @GeneratedValue

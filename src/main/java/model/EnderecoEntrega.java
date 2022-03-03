@@ -14,7 +14,7 @@ import javax.persistence.Embedded;
  * @author j
  */
 @Embeddable
-public class enderecoEntrega  implements Serializable {
+public class EnderecoEntrega  implements Serializable {
 
     private static final long serialVersionUID = 1l;
     

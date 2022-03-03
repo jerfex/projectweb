@@ -12,11 +12,11 @@ import java.util.List;
  * @author j
 */
 
-public class cadastroPedidoBean {
+public class CadastroPedidoBean {
 
     private List<Integer> itens;
 
-    public cadastroPedidoBean() {
+    public CadastroPedidoBean() {
         itens = new ArrayList<>();
         itens.add(1);
     }

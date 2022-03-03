@@ -31,7 +31,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "pedido")
-public class pedido implements Serializable {
+public class Pedido implements Serializable {
 
     private static final long serialVersionUID = 1l;
     @Id
@@ -53,20 +53,20 @@ public class pedido implements Serializable {
     private BigDecimal valorTotal;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private statusPedido staPedido;
+    private StatusPedido staPedido;
     @Enumerated(EnumType.STRING)
     @Column(name = "forma_pagamento", nullable = false, length = 20)
-    private formaPagamento forPagamento;
+    private FormaPagamento forPagamento;
     @ManyToOne
     @JoinColumn(name = "vendedor_id", nullable = false)
-    private usuario vendedor;
+    private Usuario vendedor;
      @ManyToOne
     @JoinColumn(name = "cliente_id", nullable = false)
-    private cliente cliente;
+    private Cliente cliente;
     @Embedded
-    private enderecoEntrega endeEntrega;
+    private EnderecoEntrega endeEntrega;
     @OneToMany(mappedBy = "pedido",cascade = CascadeType.ALL , orphanRemoval = true)
-    private List<itemPedido> itens = new ArrayList<>();
+    private List<ItemPedido> itens = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -108,39 +108,39 @@ public class pedido implements Serializable {
         this.valorTotal = valorTotal;
     }
 
-    public statusPedido getStaPedido() {
+    public StatusPedido getStaPedido() {
         return staPedido;
     }
 
-    public void setStaPedido(statusPedido staPedido) {
+    public void setStaPedido(StatusPedido staPedido) {
         this.staPedido = staPedido;
     }
 
-    public formaPagamento getForPagamento() {
+    public FormaPagamento getForPagamento() {
         return forPagamento;
     }
 
-    public void setForPagamento(formaPagamento forPagamento) {
+    public void setForPagamento(FormaPagamento forPagamento) {
         this.forPagamento = forPagamento;
     }
 
-    public usuario getVendedor() {
+    public Usuario getVendedor() {
         return vendedor;
     }
 
-    public void setVendedor(usuario vendedor) {
+    public void setVendedor(Usuario vendedor) {
         this.vendedor = vendedor;
     }
 
-    public cliente getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(cliente cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 
-    public enderecoEntrega getEndeEntrega() {
+    public EnderecoEntrega getEndeEntrega() {
         return endeEntrega;
     }
 
@@ -160,15 +160,15 @@ public class pedido implements Serializable {
         this.dataEntrega = dataEntrega;
     }
 
-    public void setEndeEntrega(enderecoEntrega endeEntrega) {
+    public void setEndeEntrega(EnderecoEntrega endeEntrega) {
         this.endeEntrega = endeEntrega;
     }
 
-    public List<itemPedido> getItens() {
+    public List<ItemPedido> getItens() {
         return itens;
     }
 
-    public void setItens(List<itemPedido> itens) {
+    public void setItens(List<ItemPedido> itens) {
         this.itens = itens;
     }
 
@@ -190,7 +190,7 @@ public class pedido implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final pedido other = (pedido) obj;
+        final Pedido other = (Pedido) obj;
         return Objects.equals(this.id, other.id);
     }
 

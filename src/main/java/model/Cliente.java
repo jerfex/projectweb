@@ -25,7 +25,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "cliente")
-public class cliente implements Serializable {
+public class Cliente implements Serializable {
 
     private static final long serialVersionUID = 1l;
     @Id
@@ -39,9 +39,9 @@ public class cliente implements Serializable {
     private String documentoReceitaFederal;
     @Enumerated(EnumType.STRING)
     @Column(nullable = false , length = 10)
-    private tipoPessoa tipo;
+    private TipoPessoa tipo;
     @OneToMany(mappedBy = "cliente" , cascade = CascadeType.ALL)
-    private List<endereco> enderecos = new ArrayList<>();
+    private List<Endereco> enderecos = new ArrayList<>();
     
     
     public Long getId() {
@@ -76,19 +76,19 @@ public class cliente implements Serializable {
         this.documentoReceitaFederal = documentoReceitaFederal;
     }
 
-    public List<endereco> getEnderecos() {
+    public List<Endereco> getEnderecos() {
         return enderecos;
     }
 
-    public void setEnderecos(List<endereco> enderecos) {
+    public void setEnderecos(List<Endereco> enderecos) {
         this.enderecos = enderecos;
     }
 
-    public tipoPessoa getTipo() {
+    public TipoPessoa getTipo() {
         return tipo;
     }
 
-    public void setTipo(tipoPessoa tipo) {
+    public void setTipo(TipoPessoa tipo) {
         this.tipo = tipo;
     }
 
@@ -110,7 +110,7 @@ public class cliente implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final cliente other = (cliente) obj;
+        final Cliente other = (Cliente) obj;
         return Objects.equals(this.id, other.id);
     }
 

@@ -7,10 +7,12 @@ package model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -25,10 +27,13 @@ public class Produto implements Serializable {
      @Id
     @GeneratedValue
     private Long id; 
+    @NotBlank
     private String nome;
     private String sku;
+    @Column(name = "valor_unitario" , nullable = false, length = 5)
+    private BigDecimal valorUnitario;
     @NotNull
-    private BigDecimal valorUnitario; 
+    @Column(name = "quantidade_estoque" , nullable = false, length = 5)
     private Integer quantidadeEsotque; 
     private Categoria categoria;
 

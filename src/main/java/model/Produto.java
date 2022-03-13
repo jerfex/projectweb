@@ -11,6 +11,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -30,11 +31,14 @@ public class Produto implements Serializable {
     @NotBlank
     private String nome;
     private String sku;
+    @NotNull
     @Column(name = "valor_unitario" , nullable = false, length = 5)
     private BigDecimal valorUnitario;
     @NotNull
     @Column(name = "quantidade_estoque" , nullable = false, length = 5)
     private Integer quantidadeEsotque; 
+    @NotNull
+    @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;
 
     public Long getId() {

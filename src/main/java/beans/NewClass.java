@@ -16,7 +16,7 @@ public class NewClass {
           
               System.out.println("*");  
             }
-              System.out.println("*"); 
+      
               System.out.println("beans.NewClass.main()");
             }
      }
